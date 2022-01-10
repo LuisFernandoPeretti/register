@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/LuisFernandoPeretti/register/issues"
   },
-  "homepage": "https://github.com/LuisFernandoPeretti/register#readme"
+  "homepage": "https://github.com/LuisFernandoPeretti/register#readme",
+  "dependencies": {
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.5"
+  }
 }
