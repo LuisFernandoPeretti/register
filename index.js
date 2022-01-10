@@ -1,39 +1,17 @@
-const Sequelize = require('sequelize');
+const express = require("express");
+const app = express();
+const { engine } = require('express-handlebars');
 
-const sequelize = new Sequelize('postgres', 'postgres', 'Info@1234', {
-    host: 'localhost',
-    dialect: 'postgres'
+app.engine('handlebars', engine({defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
+
+//Rotas
+app.get('/pagamento', function(req, res){
+    res.render('pagamento');
 });
 
-sequelize.authenticate().then(function() {
-    console.log('Conexão realizada com sucesso');
-}).catch(function(err){
-    console.log('Error ao realizar a conexao com o BD: ' + err);
+app.get('/add-pagamento', function(req, res){
+    res.render('add-pagamento');
 });
 
-/*
-const User = sequelize.define('pagamentos', {
-    nome: {
-        type: Sequelize.STRING,
-    },
-    valor: {
-        type: Sequelize.DOUBLE
-    }
-});
-
-User.sync({force: true})
-*/
-
-const Pagamento = sequelize.define('pagamentos', {
-    nome: {
-        type: Sequelize.STRING,
-    },
-    valor: {
-        type: Sequelize.DOUBLE
-    }
-});
-
-Pagamento.create({
-    nome: "Energia",
-    valor: 220
-})
+app.listen(8080);
