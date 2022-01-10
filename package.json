@@ -17,7 +17,13 @@
   },
   "homepage": "https://github.com/LuisFernandoPeretti/register#readme",
   "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "handlebars": "^4.7.7",
     "pg": "^8.7.1",
     "sequelize": "^6.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
