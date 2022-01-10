@@ -1,0 +1,19 @@
+{
+  "name": "register",
+  "version": "1.0.0",
+  "description": "Open Source Project for email registration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisFernandoPeretti/register.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisFernandoPeretti/register/issues"
+  },
+  "homepage": "https://github.com/LuisFernandoPeretti/register#readme"
+}
