@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LuisFernandoPeretti/register#readme",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "handlebars": "^4.7.7",
