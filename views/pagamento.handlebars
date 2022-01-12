@@ -4,5 +4,6 @@
     Nome: {{dataValues.nome}}<br>
     Valor: {{dataValues.valor}}<br>
     Cadastrado: {{#formatDate dataValues.createdAt}}{{/formatDate}}<br>
+    <a href="/del-pagamento/{{dataValues.id}}"><button>Apagar</button></a>
     <hr>
 {{/each}}

@@ -43,4 +43,15 @@ app.post('/add-pagamento', function(req, res){
     //res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>")
 })
 
+app.get('/del-pagamento/:id', function(req, res){
+    Pagamento.destroy({
+        where: {'id': req.params.id}
+    }).then(function(){
+        res.redirect('pagamento')
+        //res.send("Pagamento apagado com sucesso!")
+    }).catch(function(erro){
+        res.send("Pagamento nao apagado")
+    })
+})
+
 app.listen(8080);
