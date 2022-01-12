@@ -22,6 +22,8 @@ app.use(bodyParser.json())
 app.get('/pagamento', function(req, res){
     Pagamento.findAll({order: [['valor', 'DESC']]}).then(function(pagamentos){
         res.render('pagamento', {pagamentos: pagamentos});
+        //return res.json(pagamentos)
+        //return res.json({titulo: "sss"})
     })
 
 });
